@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
@@ -22,7 +20,7 @@ public class Spawner : MonoBehaviour
 
     public void BallSpawn()
     {
-        Instantiate(_ball, new Vector3(0,4,-18) , Quaternion.identity);
+        Instantiate(_ball, new Vector3(0, 4, -18), Quaternion.identity);
     }
 
     // Update is called once per frame

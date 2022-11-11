@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -17,6 +15,11 @@ public class Player : MonoBehaviour
         _gameManager = FindObjectOfType<GameManager>();
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        _gameManager.PlayerDied();
+    }
+
     void Update()
     {
         float yMove = Input.GetAxis("Vertical") * Time.deltaTime * _Speed * _boostVertical;
@@ -32,8 +35,5 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        _gameManager.PlayerDied();
-    }
+
 }

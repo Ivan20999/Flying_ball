@@ -5,26 +5,17 @@ using UnityEngine;
 public class Progress : MonoBehaviour
 {
 
-   
-    public int Coins;
-    public int Width;
-    public int Height;
+    public float _timeLastGame;
+    public float _attemptNumber;
 
-    public static Progress Instance;
-
-    private void Awake()
+    private void Start()
     {
-        if (Instance == null)
-        {
-            transform.parent = null;
-            DontDestroyOnLoad(gameObject);
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        
+    }
 
+    private void Update()
+    {
+        
     }
 
 }

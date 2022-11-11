@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 26016033}
   - component: {fileID: 26016032}
   - component: {fileID: 26016031}
+  - component: {fileID: 26016034}
   m_Layer: 5
   m_Name: "Dropdown(\u0421omplexities)"
   m_TagString: Untagged
@@ -215,15 +216,27 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: '  EASY'
+    - m_Text: "  \u041B\u0415\u0413\u041A\u041E"
       m_Image: {fileID: 0}
-    - m_Text: '  NORMAL'
+    - m_Text: "  \u0421\u0420\u0415\u0414\u041D\u0415"
       m_Image: {fileID: 0}
-    - m_Text: '  HARD'
+    - m_Text: "  \u0421\u041B\u041E\u0416\u041D\u041E"
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 26016034}
+        m_TargetAssemblyTypeName: "Drop\u0421omplexity, Assembly-CSharp"
+        m_MethodName: SetComplexity
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &26016032
 MonoBehaviour:
@@ -263,6 +276,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26016029}
   m_CullTransparentMesh: 1
+--- !u!114 &26016034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26016029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26fe80aa599df541b27c7f4d81afee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dropdown: {fileID: 26016031}
+  _speedGame: 0
 --- !u!1 &98999437
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +662,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '  EASY'
+  m_text: "  \u041B\u0415\u0413\u041A\u041E"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1762,7 +1789,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLAY
+  m_text: "\u0421\u0422\u0410\u0420\u0422"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
