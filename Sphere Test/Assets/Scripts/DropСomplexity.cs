@@ -6,7 +6,7 @@ public class Drop—omplexity : MonoBehaviour
 
     [SerializeField] TMP_Dropdown _dropdown;
 
-    public float _speedGame;
+    public float _choice—omplexity;
 
     private void Start()
     {
@@ -15,19 +15,6 @@ public class Drop—omplexity : MonoBehaviour
 
     public void SetComplexity()
     {
-        switch (_dropdown.value)
-        {
-            case 0:
-                _speedGame = 1.0f;
-                break;
-            case 1:
-                _speedGame = 4.0f;
-                break;
-            case 2:
-                _speedGame = 8.0f;
-                break;
-        }
-
-        PlayerPrefs.SetFloat("speed", _speedGame);
+        PlayerPrefs.SetFloat("complexity", _dropdown.value);
     }
 }

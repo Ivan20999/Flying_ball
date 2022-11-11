@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Progress : MonoBehaviour
@@ -10,12 +8,19 @@ public class Progress : MonoBehaviour
 
     private void Start()
     {
-        
+        _attemptNumber = PlayerPrefs.GetFloat("attempt");
+        _attemptNumber += 1;
     }
 
     private void Update()
     {
-        
+        _timeLastGame += Time.deltaTime;
+    }
+
+    public void SaveData()
+    {
+        PlayerPrefs.SetFloat("attempt", _attemptNumber);
+        PlayerPrefs.SetFloat("timeGame", _timeLastGame);
     }
 
 }

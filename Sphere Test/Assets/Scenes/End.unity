@@ -1122,6 +1122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1099817814}
   - component: {fileID: 1099817813}
+  - component: {fileID: 1099817815}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1156,6 +1157,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1099817815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099817812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4794ed74d37c0234c9840f361acd622a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timeTextMeaning: {fileID: 591167513}
+  _attemptTextMeaning: {fileID: 1866503892}
 --- !u!1 &1171760214
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,7 +1423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dropdown: {fileID: 1366232954}
-  _speedGame: 0
+  "_choice\u0421omplexity": 0
 --- !u!114 &1366232954
 MonoBehaviour:
   m_ObjectHideFlags: 0

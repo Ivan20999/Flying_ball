@@ -5,25 +5,33 @@ public class Spawner : MonoBehaviour
     [SerializeField] GameObject _ball;
     [SerializeField] GameObject _obstacleOnePrefab;
     [SerializeField] GameObject _obstacleTwoPrefab;
-    [SerializeField] float _spawnCycle = 0.5f;
 
-    GameManager _manager;
+    public float _choice—omplexity;
+    public float _spawnCycle;
 
     float _elapsedTime;
     bool _spawnPowerup = true;
 
-    // Start is called before the first frame update
     void Start()
     {
-        BallSpawn();
-    }
-
-    public void BallSpawn()
-    {
         Instantiate(_ball, new Vector3(0, 4, -18), Quaternion.identity);
+
+        _choice—omplexity = PlayerPrefs.GetFloat("complexity");
+
+        switch (_choice—omplexity)
+        {
+            case 0:
+                _spawnCycle = 1f;
+                break;
+            case 1:
+                _spawnCycle = 0.6f;
+                break;
+            case 2:
+                _spawnCycle = 0.2f;
+                break;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
 
